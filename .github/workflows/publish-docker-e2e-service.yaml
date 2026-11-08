@@ -16,14 +16,15 @@
 
 name: Publish E2E service images
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'test/e2e-v2/java-test-service/**'
-      - 'test/Makefile'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - master
+#     paths:
+#       - 'test/e2e-v2/java-test-service/**'
+#       - 'test/Makefile'
+# 
 env:
   SKIP_TEST: true
   HUB: ghcr.io/apache/skywalking

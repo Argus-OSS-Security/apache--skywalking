@@ -16,14 +16,15 @@
 
 name: publish-docker
 
-on:
-  push:
-    branches:
-      - master
-  release:
-    types:
-      - released
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - master
+#   release:
+#     types:
+#       - released
+# 
 env:
   SKIP_TEST: true
 

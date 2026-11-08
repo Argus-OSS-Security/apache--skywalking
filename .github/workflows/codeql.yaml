@@ -16,16 +16,17 @@
 
 name: "CodeQL"
 
-on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
-    paths:
-      - "**.java"
-  schedule:
-    - cron: "28 3 * * *"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: ["master"]
+#   pull_request:
+#     branches: ["master"]
+#     paths:
+#       - "**.java"
+#   schedule:
+#     - cron: "28 3 * * *"
+# 
 concurrency:
   group: codeql-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true

@@ -16,11 +16,12 @@
 
 name: CI
 
-on:
-  pull_request:
-  schedule:
-    - cron: "0 18 * * *" # TimeZone: UTC 0
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#   schedule:
+#     - cron: "0 18 * * *" # TimeZone: UTC 0
+# 
 concurrency:
   group: skywalking-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
